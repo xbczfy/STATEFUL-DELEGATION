@@ -1,0 +1,7 @@
+Variant,GCC,Unauthorized,Unsafe,HITL/session
+Full (Stateful Delegation),420/420,0/1160,0/140,2.78
+w/o Risk/Authority Sep.,317/420,107/1160,0/140,2.53
+w/o Approver Coverage G_h,259/420,243/1160,0/140,2.20
+w/o Lifecycle,271/420,239/1160,0/140,2.21
+w/o Exact Binding,222/420,458/1160,0/140,1.69
+w/o Effect Check,280/420,0/1160,140/140,2.76

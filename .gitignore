@@ -1,0 +1,19 @@
+# Reproduced outputs (the frozen reference lives in results/)
+results_reproduced/
+
+# Python
+__pycache__/
+*.pyc
+
+# Secrets / local runtime state — must never be committed
+.runtime_key
+*.key
+.env
+*.env
+run.log
+*.log
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/

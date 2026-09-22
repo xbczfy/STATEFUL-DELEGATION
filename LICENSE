@@ -1,0 +1,16 @@
+LICENSE PLACEHOLDER — NOT YET CHOSEN
+
+Copyright (c) 2026 Feiyang Zheng, University of Chinese Academy of Sciences.
+
+All rights reserved until the author selects and commits an open-source
+license. This file is an intentional placeholder: do not publish the
+repository publicly until a license has been chosen and this file replaced.
+
+Before release, the author must:
+  1. choose a license (for example, for code plus data, consider whether the
+     benchmark traces/labels and the evaluation scripts should share one
+     license or use separate licenses);
+  2. replace this placeholder with the full license text;
+  3. set the final repository URL in the paper and README;
+  4. re-run scripts/validate_schema.py and scripts/reproduce_tables.py on a
+     clean, private checkout.

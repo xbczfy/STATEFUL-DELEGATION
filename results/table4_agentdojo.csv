@@ -1,0 +1,6 @@
+Suite,Baseline success,Stateful Delegation success
+banking,12/16,12/16
+slack,11/21,13/21
+travel,8/20,11/20
+workspace,33/40,35/40
+Total,64/97 (66.0%),71/97 (73.2%)

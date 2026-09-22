@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Candidate-action trace record",
+  "description": "One runtime-visible candidate action. Evaluator-only reference_state is excluded; gold decisions live in label_schema.json. One record per line in traces/natural_v1_candidate_actions.jsonl and traces/clean_candidate_actions.jsonl (2,240 records each).",
+  "type": "object",
+  "required": [
+    "candidate_action_id", "workflow_id", "step_id", "split", "task_family",
+    "policy_id", "tool", "target", "resource", "operation", "required_level",
+    "risk_level", "permission_scope", "action_permissions",
+    "requested_permissions", "candidate_plans", "permission_costs",
+    "required_approver_groups", "execution_capability", "observed_effect",
+    "approval_token", "natural_perturbations", "visible_to_runtime"
+  ],
+  "properties": {
+    "candidate_action_id": {"type": "string", "pattern": "^v4_[0-9]{4}:step_[0-9]{2}$"},
+    "workflow_id": {"type": "string", "pattern": "^v4_[0-9]{4}$"},
+    "step_id": {"type": "integer", "minimum": 0},
+    "split": {"type": "string", "enum": ["seen", "compositional", "unseen_workflow", "unseen_policy", "long_horizon"]},
+    "task_family": {"type": "string"},
+    "policy_id": {"type": "string", "enum": ["p1", "p2"]},
+    "tool": {"type": "string"},
+    "target": {"type": "string"},
+    "resource": {"type": "string"},
+    "operation": {"type": "array", "items": {"type": "string"}},
+    "required_level": {"type": "string", "pattern": "^L[0-9]+$"},
+    "risk_level": {"type": "number", "minimum": 0},
+    "permission_scope": {"type": "array", "items": {"type": "string"}},
+    "action_permissions": {"type": "array", "items": {"type": "string"}},
+    "requested_permissions": {"type": "array"},
+    "candidate_plans": {"type": "array"},
+    "permission_costs": {"type": "object"},
+    "required_approver_groups": {"type": "array", "items": {"type": "array", "items": {"type": "string"}}},
+    "execution_capability": {"type": "string", "enum": ["transactional", "compensatable", "irreversible"]},
+    "observed_effect": {
+      "type": "object",
+      "required": ["violations"],
+      "properties": {"violations": {"type": "array", "items": {"type": "string"}}}
+    },
+    "approval_token": {"type": ["object", "null"]},
+    "natural_perturbations": {"type": "array", "items": {"type": "string"}},
+    "visible_to_runtime": {"type": "boolean", "const": true}
+  },
+  "additionalProperties": false
+}

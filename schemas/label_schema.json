@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Gold label record",
+  "description": "Evaluator-only gold decision and opportunity flags for one candidate action. One record per line in labels/natural_v1_labels.jsonl and labels/clean_labels.jsonl (2,240 records each). Not visible to any runtime method.",
+  "type": "object",
+  "required": [
+    "candidate_action_id", "gold_decision", "gold_binary",
+    "effect_violation_opportunity", "invalid_authorization_opportunity",
+    "authorization_opportunity", "attack_type", "audit_status"
+  ],
+  "properties": {
+    "candidate_action_id": {"type": "string", "pattern": "^v4_[0-9]{4}:step_[0-9]{2}$"},
+    "gold_decision": {"type": "string", "enum": ["allow", "request_approval", "block"]},
+    "gold_binary": {"type": "string", "enum": ["allow", "deny"]},
+    "effect_violation_opportunity": {"type": "boolean"},
+    "invalid_authorization_opportunity": {"type": "boolean"},
+    "authorization_opportunity": {"type": "boolean"},
+    "attack_type": {"type": "string"},
+    "audit_status": {"type": "string", "enum": ["reviewed"]}
+  },
+  "additionalProperties": false
+}

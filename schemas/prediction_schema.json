@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Frozen prediction record",
+  "description": "One frozen per-event decision. Three files use three shapes: internal NATURAL (7 methods), clean ablation (6 variants), external binary (ours/drift/apc).",
+  "oneOf": [
+    {
+      "description": "predictions/natural_internal_predictions.jsonl (7 methods x 2,240)",
+      "type": "object",
+      "required": ["candidate_action_id", "method", "pred_decision", "hitl", "effect_detected"],
+      "properties": {
+        "candidate_action_id": {"type": "string", "pattern": "^v4_[0-9]{4}:step_[0-9]{2}$"},
+        "method": {"type": "string", "enum": [
+          "reapprove_every_step", "approval_on_deny", "boundary_only",
+          "boundary_static_risk", "boundary_dynamic_risk",
+          "hitl_without_approval_auth", "full_stateful_delegation"]},
+        "pred_decision": {"type": "string", "enum": ["allow", "request_approval", "block"]},
+        "hitl": {"type": "boolean"},
+        "effect_detected": {"type": "boolean"}
+      },
+      "additionalProperties": false
+    },
+    {
+      "description": "predictions/clean_ablation_predictions.jsonl (6 variants x 2,240)",
+      "type": "object",
+      "required": ["candidate_action_id", "variant", "pred_decision", "hitl", "effect_detected"],
+      "properties": {
+        "candidate_action_id": {"type": "string", "pattern": "^v4_[0-9]{4}:step_[0-9]{2}$"},
+        "variant": {"type": "string", "enum": [
+          "full", "no_risk_authority_separation", "no_approver_coverage_Gh",
+          "no_lifecycle", "no_exact_binding", "no_effect_check"]},
+        "pred_decision": {"type": "string", "enum": ["allow", "request_approval", "block"]},
+        "hitl": {"type": "boolean"},
+        "effect_detected": {"type": "boolean"}
+      },
+      "additionalProperties": false
+    },
+    {
+      "description": "predictions/external_binary_predictions.jsonl (ours/drift/apc x 2,240)",
+      "type": "object",
+      "required": ["candidate_action_id", "method", "pred_binary", "effect_detected"],
+      "properties": {
+        "candidate_action_id": {"type": "string", "pattern": "^v4_[0-9]{4}:step_[0-9]{2}$"},
+        "method": {"type": "string", "enum": ["ours", "drift", "apc"]},
+        "pred_binary": {"type": "string", "enum": ["allow", "deny"]},
+        "effect_detected": {"type": "boolean"}
+      },
+      "additionalProperties": false
+    }
+  ]
+}

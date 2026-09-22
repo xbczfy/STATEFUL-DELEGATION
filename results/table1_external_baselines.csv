@@ -1,0 +1,4 @@
+Method,Exec Acc.,FAR,FDR,Unauthorized,Unsafe,Allow events,Deny-now events
+DRIFT,37.14,91.96,7.51,1350,121/140,772,1468
+APC (minimal-scope adapter),61.29,34.06,47.54,500,40/140,772,1468
+Ours (Stateful Delegation),100.00,0.00,0.00,0,0/140,772,1468
