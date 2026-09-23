@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this benchmark or artifact, please cite the paper and this repository."
+title: "Stateful Delegation: Scoped Runtime Authorization for Multi-Step Security Agents — Benchmark Artifact"
+type: software
+authors:
+  - family-names: Zheng
+    given-names: Feiyang
+    affiliation: "University of Chinese Academy of Sciences"
+    email: zhengfeiyang@mails.ucas.ac.cn
+version: "v1.0-submission"
+date-released: 2026-09-23
+license: MIT
+repository-code: "https://github.com/xbczfy/STATEFUL-DELEGATION"
+url: "https://github.com/xbczfy/STATEFUL-DELEGATION"
+preferred-citation:
+  type: conference-paper
+  title: "Stateful Delegation: Scoped Runtime Authorization for Multi-Step Security Agents"
+  authors:
+    - family-names: Zheng
+      given-names: Feiyang
+      affiliation: "University of Chinese Academy of Sciences"
+  year: 2026

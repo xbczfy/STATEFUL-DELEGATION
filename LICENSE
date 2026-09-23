@@ -1,16 +1,25 @@
-LICENSE PLACEHOLDER — NOT YET CHOSEN
+MIT License
 
-Copyright (c) 2026 Feiyang Zheng, University of Chinese Academy of Sciences.
+Copyright (c) 2026 Feiyang Zheng, University of Chinese Academy of Sciences
 
-All rights reserved until the author selects and commits an open-source
-license. This file is an intentional placeholder: do not publish the
-repository publicly until a license has been chosen and this file replaced.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-Before release, the author must:
-  1. choose a license (for example, for code plus data, consider whether the
-     benchmark traces/labels and the evaluation scripts should share one
-     license or use separate licenses);
-  2. replace this placeholder with the full license text;
-  3. set the final repository URL in the paper and README;
-  4. re-run scripts/validate_schema.py and scripts/reproduce_tables.py on a
-     clean, private checkout.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+NOTE: This MIT License applies to the code and scripts. The benchmark data in
+traces/ and labels/ is synthetic and is provided for research and paper-result
+reproduction; it contains no real customer data.

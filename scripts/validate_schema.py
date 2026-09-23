@@ -23,8 +23,8 @@ SECRET_PATTERNS = [
     (r"8Xkr[A-Za-z0-9]{6,}", "Aliyun AccessKey secret fragment"),
     (r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}", "email address"),
     (r"\b\d{1,3}(?:\.\d{1,3}){3}\b", "IPv4 address"),
-    # JSON Schema meta-schema URLs in schemas/*.json are allowed.
-    (r"https?://(?!json-schema\.org)[^\s\"']+", "hard-coded URL"),
+    # JSON Schema meta-schema URLs and the canonical repository URL are allowed.
+    (r"https?://(?!json-schema\.org)(?!github\.com/xbczfy)[^\s\"']+", "hard-coded URL"),
 ]
 
 
